@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ListManager from "./ListManager";
 import Counter from './Counter';
 import Events from './Componenets/Events';
+import GradeManager from './GradeManager';
 
 function Button({nom}) {
   
@@ -33,6 +34,10 @@ function App() {
       </p>
       <div style={{ display: "flex", gap: "20px" }}> <ColorBox initialColor="#ff0000" colorOptions={["#ff0000", "#00ff00", "#0000ff", "#ffff00"]} /> <ColorBox initialColor="#00ff00" colorOptions={["#00ff00", "#ff00ff", "#00ffff", "#ffa500"]} /> </div>
       
+      <hr />
+      <h2>Gestionnaire de Notes</h2>
+      <GradeManager initialNotes={[12, 15, 8, 18]} />
+
       <hr />
       <h2>Événements</h2>
       <Events />

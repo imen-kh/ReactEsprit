@@ -6,6 +6,7 @@ import ListManager from "./ListManager";
 import Counter from './Counter';
 import Events from './Componenets/Events';
 import GradeManager from './GradeManager';
+import TodoList from './TodoList';
 
 function Button({nom}) {
   
@@ -34,6 +35,17 @@ function App() {
       </p>
       <div style={{ display: "flex", gap: "20px" }}> <ColorBox initialColor="#ff0000" colorOptions={["#ff0000", "#00ff00", "#0000ff", "#ffff00"]} /> <ColorBox initialColor="#00ff00" colorOptions={["#00ff00", "#ff00ff", "#00ffff", "#ffa500"]} /> </div>
       
+      <hr />
+      <h2>Todo List avec Priorités</h2>
+      <TodoList
+        initialTasks={[
+          { name: "Réviser React", priority: "Haute" },
+          { name: "Faire les exercices TP", priority: "Haute" },
+          { name: "Lire la documentation Vite", priority: "Moyenne" },
+          { name: "Organiser les notes de cours", priority: "Basse" },
+        ]}
+      />
+
       <hr />
       <h2>Gestionnaire de Notes</h2>
       <GradeManager initialNotes={[12, 15, 8, 18]} />

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
 function ColorBox({ initialColor, colorOptions }) {
-  // état pour gérer la couleur actuelle
   const [color, setColor] = useState(initialColor);
 
-  // fonction pour changer la couleur
   const changeColor = () => {
     const randomIndex = Math.floor(Math.random() * colorOptions.length);
     setColor(colorOptions[randomIndex]);
